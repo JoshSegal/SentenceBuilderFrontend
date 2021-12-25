@@ -1,7 +1,9 @@
+import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
 import { WordsService } from 'src/app/services/words.service';
 import { Word } from 'src/app/word.model';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-list',
@@ -10,26 +12,22 @@ import { Router } from '@angular/router';
 })
 export class ListComponent implements OnInit {
 
-  word: Word[];
+  words: Word[] =[];
   displayedColumns = ['Noun','Verb','Adjective','Adverb','Pronoun', 'Preposition', 'Conjunction', 'Determiner', 'Exclamation']
 
-  constructor(private wordsService: WordsService, private router: Router) { }
+  constructor(private issueService: WordsService, private router: Router) { }
 
   ngOnInit() {
-    this.fetchWords();
+    this.fetchIssues();
   }
 
-  fetchWords() {
-    this.wordsService
+  fetchIssues() {
+    this.issueService
     .getWords()
-    .subscribe((data: Word[]) => {
-      this.word = data;
+    .subscribe ((data: any) => {
+      this.words = data;
       console.log('Data requested ... ');
-      console.log(this.word);
+      console.log(this.words);
     });
-    
-    
   }
-  
-
 }

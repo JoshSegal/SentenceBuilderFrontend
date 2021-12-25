@@ -1,41 +1,59 @@
-<!-- <div>
+<div>
+  <br>
+ 
+    <button mat-raised-button color="primary" routerLink="/create">Create New Issue</button>
+    <br><br>
+  
     <br>
-    <mat-card>
-      <button mat-raised-button color="primary" routerLink="/create">Create New Issue</button>
-      <br><br>
-      <mat-divider></mat-divider>
-      <br>
-      <table mat-table [dataSource]="issues">
-        <ng-container matColumnDef="title">
-          <th mat-header-cell *matHeaderCellDef> Title </th>
-          <td mat-cell *matCellDef="let element"> {{element.title}} </td>
-        </ng-container>
-  
-        <ng-container matColumnDef="responsible">
-          <th mat-header-cell *matHeaderCellDef> Responsible </th>
-          <td mat-cell *matCellDef="let element"> {{element.responsible}} </td>
-        </ng-container>
-  
-        <ng-container matColumnDef="severity">
-          <th mat-header-cell *matHeaderCellDef> Severity </th>
-          <td mat-cell *matCellDef="let element"> {{element.severity}} </td>
-        </ng-container>
-  
-        <ng-container matColumnDef="status">
-          <th mat-header-cell *matHeaderCellDef> Status </th>
-          <td mat-cell *matCellDef="let element"> {{element.status}} </td>
-        </ng-container>
-  
-        <ng-container matColumnDef="actions">
-            <th mat-header-cell *matHeaderCellDef class="mat-column-right"> Actions </th>
-            <td mat-cell *matCellDef="let element" class="mat-column-right">
-              <button mat-button color="primary" (click)="editIssue(element._id)">Edit</button>
-              <button mat-button color="warn" (click)="deleteIssue(element._id)">Delete</button>
-            </td>
-          </ng-container>
-  
+    <!-- <table [dataSource]="Word"> -->
+      <table>
+      <ng-container matColumnDef="Noun">
+        <th mat-header-cell *matHeaderCellDef> Noun </th>
+        <td mat-cell *matCellDef="let element"> {{element.Noun}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Verb">
+        <th mat-header-cell *matHeaderCellDef> Verb </th>
+        <td mat-cell *matCellDef="let element"> {{element.Verb}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Adjective">
+        <th mat-header-cell *matHeaderCellDef> Adjective </th>
+        <td mat-cell *matCellDef="let element"> {{element.Adjective}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Adverb">
+        <th mat-header-cell *matHeaderCellDef> Adverb </th>
+        <td mat-cell *matCellDef="let element"> {{element.Adverb}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Pronoun">
+        <th mat-header-cell *matHeaderCellDef> Pronoun </th>
+        <td mat-cell *matCellDef="let element"> {{element.Pronoun}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Preposition">
+        <th mat-header-cell *matHeaderCellDef> Preposition </th>
+        <td mat-cell *matCellDef="let element"> {{element.Preposition}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Conjunction">
+        <th mat-header-cell *matHeaderCellDef> Conjunction </th>
+        <td mat-cell *matCellDef="let element"> {{element.Conjunction}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Determiner">
+        <th mat-header-cell *matHeaderCellDef> Determiner </th>
+        <td mat-cell *matCellDef="let element"> {{element.Determiner}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Exclamation">
+        <th mat-header-cell *matHeaderCellDef> Exclamation </th>
+        <td mat-cell *matCellDef="let element"> {{element.Exclamation}} </td>
+      </ng-container>
+
+
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-    </mat-card>
-  </div> -->
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

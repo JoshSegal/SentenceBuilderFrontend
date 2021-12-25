@@ -9,7 +9,16 @@ import { Router } from '@angular/router';
 })
 export class CreateComponent implements OnInit {
 
-  constructor(private wordsService: WordsService, private router: Router) { }
+  enteredWord = '';
+  newWord = 'NounTest';
+
+  onCreate() {
+    
+    this.newWord = this.enteredWord
+  }
+  constructor(private wordsService: WordsService, private router: Router) { 
+   
+  }
 
   ngOnInit(): void {
   }
