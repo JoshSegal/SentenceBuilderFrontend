@@ -6,13 +6,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WordsService {
 
-  uri = 'http://localhost:4000';
+  uri = 'http://localhost:8090';
 
   constructor(private http: HttpClient) { }
 
 
 getWords() {
-  return this.http.get(`${this.uri}/words`);
+  return this.http.get(`${this.uri}/nouns`);
 }
 
 getWordByNoun(noun: any) {
